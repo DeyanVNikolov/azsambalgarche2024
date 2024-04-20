@@ -1,0 +1,60 @@
+.content-holder{
+    margin: 15px;
+}
+
+.sup {
+    vertical-align: super;
+    font-size: small;
+}
+
+.navbar {
+    background-color: rgb(179, 255, 204);
+}
+
+i.fa-brands {
+    font-size: 35px;
+    margin: 5px;
+}
+
+.card {
+    height: 100%;
+  }
+
+.hero-img {
+    background-image: url("/static/img/rila-bg.jpg");
+}
+
+.offers-img {
+    background-image: url("/static/img/offers-bg.jpg");
+}
+
+.cyprus-img {
+    background-image: url("/static/img/dest/cyprus-hero.jpg");
+}
+
+.paris-img {
+    background-image: url("/static/img/dest/paris-hero.jpg");
+}
+
+.phuket-img {
+    background-image: url("/static/img/dest/phuket-hero.jpg");
+}
+
+.main-hero {
+    background-position: center top 30%;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+
+
+.hero-body {
+    color: white !important;
+}
+
+.hero-body .subtitle {
+    color: white !important;
+}

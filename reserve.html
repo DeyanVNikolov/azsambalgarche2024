@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="bg" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TourEase</title>
+
+    <meta name="description" content="Az Sam Balgarche 2024">
+    <meta name="keywords" content="Az Sam Balgarche 2024">
+    <meta name="author" content="Deyan Nikolov @ PGKMKS">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="revisit-after" content="7 days">
+    <meta name="language" content="BG">
+
+    <meta property="og:title" content="TourEase">
+    <meta property="og:description" content="Az Sam Balgarche 2024">
+    <meta property="og:type" content="website">
+
+    <meta name="subject" content="Az Sam Balgarche 2024">
+    <meta name="rating" content="general">
+    <meta name="distribution" content="global">
+    <meta name="target" content="all">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="classification" content="General">
+
+
+    <link rel="icon" href="/static/img/logo/default.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <script>
+        if (document.cookie.indexOf('logged=true') == -1) {
+            let nexturl = window.location.pathname
+            let args = window.location.search
+            window.location.replace('/login.html?next=' + nexturl + args)
+        }
+    </script>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+                <img src="/static/img/logo/vector/default-monochrome.svg" alt="TourEase" width="112" height="28">
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="NavBarTourEase">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="NavBarTourEase" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="/">
+                    Начало
+                </a>
+
+                <a class="navbar-item" href="/offers.html">
+                    Оферти
+                </a>
+
+                <a class="navbar-item" href="/blog.html">
+                    Блог
+                </a>
+
+                
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-primary" href="/signup.html">
+                            <strong>Регистрация&nbsp; <i class="fa-solid fa-user-plus"></i></strong>
+                        </a>
+                        <a class="button is-link" href="/login.html">
+                            Вход &nbsp; <i class="fa-solid fa-right-to-bracket"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <section class="hero is-medium">
+        <div class="hero-body main-hero">
+            <div class="container has-text-centered">
+                <img src="/static/img/logo/vector/default-monochrome-white.svg" width="400"
+                    style="margin-bottom: 30px;">
+                <h1 class="title is-1 has-text-weight-bold" style="color: white;">
+                    РЕЗЕРВАЦИЯ - <span class="dest-span"></span>
+
+                </h1>
+            </div>
+        </div>
+    </section>
+    <div class="content-holder">
+        <hr>
+
+        <div class="company-info container has-text-centered is-centered">
+
+            <h5 class="title is-2 dest-span">Пукет</h5>
+        </div>
+
+        <hr>
+
+        <div class="container has-text-centered">
+
+
+            <h1 class="title is-5 has-text-weight-normal">Вземете почивка в <span
+                    class="dest-span has-text-weight-bold"></span> за офертна цена <span
+                    class="has-text-weight-bold"><span class="dest-price">450</span>лв/човек</span></h1>
+
+                    <br>
+                    <br>
+                    Крайна дата за записване: 
+                    <h2 class="subtitle is-6 end-date has-text-weight-bold"></h2>
+
+                    <br><br>
+
+            <h2 class="subtitle is-6">Моля, попълнете данните си за резервация</h2>
+
+            <div class="form" style="width: 40%; margin: auto">
+                <div class="field">
+                    <label class="label">Име</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Име">
+                    </div>
+
+                </div>
+
+                <div class="field">
+                    <label class="label">Фамилия</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Фамилия">
+                    </div>
+
+                </div>
+
+                <div class="field">
+
+                    <label class="label">Имейл</label>
+                    <div class="control">
+                        <input class="input" type="email" placeholder="Имейл">
+                    </div>
+
+                </div>
+
+                <div class="field">
+                    <label class="label">Телефон</label>
+                    <div class="control">
+                        <input class="input" type="tel" placeholder="Телефон">
+                    </div>
+
+                </div>
+
+
+                <div class="field">
+                    <label class="label">Брой хора</label>
+                    <div class="control">
+                        <input class="input" type="number" id="count-people" placeholder="Брой хора" value="1" min="1" max="10">
+                    </div>
+
+                </div>
+
+                <div class="field">
+                    <label class="label">Крайна цена</label>
+                    <div class="control">
+                        <input class="input" type="number" id="total" readonly placeholder="Крайна цена">
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <script>
+            let price = 0
+
+
+            function calculatetotal() {
+                const people =  document.querySelector('#count-people').value
+                const total = price * people
+                document.querySelector('#total').value = total
+            }
+
+
+
+            const reserve = new URLSearchParams(window.location.search).get('dest')
+            if (reserve == 'phuket') {
+                document.querySelectorAll('.dest-span').forEach((el) => {
+                    el.innerText = 'Пукет'
+                })
+
+                document.querySelector('.end-date').innerText = '01 август 2024'
+                document.querySelector('.dest-price').innerText = '450'
+                price = 450
+                document.querySelector('.hero-body').classList.add('phuket-img')
+            }
+            
+            else if (reserve == 'paris') {
+                document.querySelectorAll('.dest-span').forEach((el) => {
+                    el.innerText = 'Париж'
+                })
+
+                document.querySelector('.end-date').innerText = '21 май 2024'
+                document.querySelector('.dest-price').innerText = '550'
+                price = 550
+                document.querySelector('.hero-body').classList.add('paris-img')
+
+
+            } else if (reserve == 'cyprus') {
+                document.querySelectorAll('.dest-span').forEach((el) => {
+                    el.innerText = 'Кипър'
+                })
+
+                document.querySelector('.end-date').innerText = '07 юли 2024'
+                document.querySelector('.dest-price').innerText = '375'
+                price = 375
+                document.querySelector('.hero-body').classList.add('cyprus-img')
+
+
+            } else {
+                window.location.replace('/offers.html')
+            }
+
+            
+
+            document.querySelector('input[type="number"]').addEventListener('input', calculatetotal)
+            calculatetotal()
+        </script>
+
+
+
+    </div>
+
+    <br>
+    <hr style="color: transparent; background-color: transparent;">
+
+
+
+    <footer class="footer" style="background-color: rgb(179, 255, 204); border-top: 2px solid #2f2f2f">
+        <div class="content has-text-centered">
+            <div class="columns has-text-centered is-centered is-vcentered">
+                <div class="column is-full">
+                    <img src="/static/img/logo/vector/default-monochrome.svg" alt="TourEase" width="400"><br>
+                    TourEase е българска туристическа агенция от ново поколение!
+                    <br>
+                    <h3 class="title is-3">Контакти</h3>
+                    <p>
+                        <strong>Телефон:</strong> 089 123 4567
+                        <br>
+                        <strong>Имейл:</strong>
+                        <a href="mailto:support@tourease.bg">support@tourease.bg</a>
+                        <br>
+                        <strong>Адрес:</strong> гр. Варна, ж.к. "Измислена поляна", ул. "Няма такава", № 42
+                    </p>
+                    <h3 class="title is-3">Социални мрежи</h3>
+                    <a href="https://www.facebook.com" target="_blank">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+
+                    </a>
+
+                    <a href="https://www.twitter.com" target="_blank">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+
+
+                </div>
+            </div>
+            <hr style="background-color: #2f2f2f5c;">
+            <p>
+                <strong>TourEase</strong> от <a href="https://deyannikolov.eu" target="_blank">Деян Николов</a>.
+                Кода е лицензиран под
+                <a href="https://www.gnu.org/licenses/gpl-3.0.html">
+                    GNU General Public License v3.0</a>.
+                <br>Разрешава се използване на кода под условията на лиценза и състезанието "Аз съм IT Българче
+                2024". <br><br>
+
+                Снимки &copy; <a href="https://pexels.com" target="_blank">Pexels</a> и <a href="https://pixabay.com"
+                    target="_blank">Pixabay</a>.
+                <br>
+                Икони &copy; <a href="https://fontawesome.com" target="_blank">Font Awesome</a>.
+
+                <br><br>
+                Не представлява реален бизнес. Прилики с действителни лица, събития и места са случайни.
+            </p>
+        </div>
+    </footer>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'),
+                0);
+
+            $navbarBurgers.forEach(el => {
+                el.addEventListener('click', () => {
+
+                    const target = el.dataset.target;
+                    const $target = document.getElementById(target);
+
+                    el.classList.toggle('is-active');
+                    $target.classList.toggle('is-active');
+
+                });
+            });
+
+        });
+
+    </script>
+</body>
+
+</html>
