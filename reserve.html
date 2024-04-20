@@ -69,7 +69,7 @@
                     Блог
                 </a>
 
-                
+
             </div>
 
             <div class="navbar-end">
@@ -94,8 +94,8 @@
             <div class="container has-text-centered">
                 <img src="/static/img/logo/vector/default-monochrome-white.svg" width="400"
                     style="margin-bottom: 30px;">
-                <h1 class="title is-1 has-text-weight-bold" style="color: white;">
-                    РЕЗЕРВАЦИЯ - <span class="dest-span"></span>
+                <h1 class="title is-2  has-text-weight-bold" style="color: white;">
+                    РЕЗЕРВАЦИЯ <br><span class="dest-span"></span>
 
                 </h1>
             </div>
@@ -118,12 +118,12 @@
                     class="dest-span has-text-weight-bold"></span> за офертна цена <span
                     class="has-text-weight-bold"><span class="dest-price">450</span>лв/човек</span></h1>
 
-                    <br>
-                    <br>
-                    Крайна дата за записване: 
-                    <h2 class="subtitle is-6 end-date has-text-weight-bold"></h2>
+            <br>
+            <br>
+            Крайна дата за записване:
+            <h2 class="subtitle is-6 end-date has-text-weight-bold"></h2>
 
-                    <br><br>
+            <br><br>
 
             <h2 class="subtitle is-6">Моля, попълнете данните си за резервация</h2>
 
@@ -165,7 +165,8 @@
                 <div class="field">
                     <label class="label">Брой хора</label>
                     <div class="control">
-                        <input class="input" type="number" id="count-people" placeholder="Брой хора" value="1" min="1" max="10">
+                        <input class="input" type="number" id="count-people" placeholder="Брой хора" value="1" min="1"
+                            max="10">
                     </div>
 
                 </div>
@@ -174,6 +175,13 @@
                     <label class="label">Крайна цена</label>
                     <div class="control">
                         <input class="input" type="number" id="total" readonly placeholder="Крайна цена">
+                    </div>
+
+                </div>
+                <br><br>
+                <div class="field">
+                    <div class="control">
+                        <button class="button is-link is-large" id="reserve-button">Резервирай</button>
                     </div>
 
                 </div>
@@ -188,10 +196,27 @@
 
 
             function calculatetotal() {
-                const people =  document.querySelector('#count-people').value
+                const people = document.querySelector('#count-people').value
                 const total = price * people
                 document.querySelector('#total').value = total
             }
+
+
+            document.querySelector('#reserve-button').addEventListener('click', () => {
+                const name = document.querySelector('input[type="text"]').value
+                const surname = document.querySelector('input[type="text"]').value
+                const email = document.querySelector('input[type="email"]').value
+                const phone = document.querySelector('input[type="tel"]').value
+                const people = document.querySelector('input[type="number"]').value
+                const total = document.querySelector('input[type="number"]').value
+
+                if (name === '' || surname === '' || email === '' || phone === '' || people === '' || total === '') {
+                    alert('Моля, попълнете всички полета!')
+                    return
+                }
+
+                alert('Вашата резервация е успешна! Очаквайте обаждане от наш служител за потвърждение.')
+            })
 
 
 
@@ -205,9 +230,7 @@
                 document.querySelector('.dest-price').innerText = '450'
                 price = 450
                 document.querySelector('.hero-body').classList.add('phuket-img')
-            }
-            
-            else if (reserve == 'paris') {
+            } else if (reserve == 'paris') {
                 document.querySelectorAll('.dest-span').forEach((el) => {
                     el.innerText = 'Париж'
                 })
@@ -233,7 +256,7 @@
                 window.location.replace('/offers.html')
             }
 
-            
+
 
             document.querySelector('input[type="number"]').addEventListener('input', calculatetotal)
             calculatetotal()
@@ -321,7 +344,6 @@
             });
 
         });
-
     </script>
 </body>
 
